@@ -26,6 +26,11 @@ resource "google_container_cluster" "primary" {
 
   network    = var.vpc_name
   subnetwork = var.vpc_subnet_name
+
+  ip_allocation_policy {
+    cluster_secondary_range_name  = "services-range"
+    services_secondary_range_name = var.vpc_subnet_range
+  }
 }
 
 # Separately Managed Node Pool
