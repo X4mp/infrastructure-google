@@ -17,4 +17,5 @@ module "gke" {
   region = var.region
   vpc_name = module.vpc.vpc_name
   vpc_subnet_name = module.vpc.subnet_name
+  vpc_subnet_range = module.vpc.subnet_range
 }
