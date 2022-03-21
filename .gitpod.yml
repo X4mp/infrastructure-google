@@ -1,0 +1,4 @@
+# Commands to start on workspace startup
+tasks:
+  - init: Install
+    command: brew install --cask google-cloud-sdk
